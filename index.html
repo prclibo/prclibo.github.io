@@ -14,39 +14,54 @@
 
         <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
         <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+
+        <script language="JavaScript">
+$(function(){  
+$('.grid').masonry({
+  // options...
+  itemSelector : '.grid-item',
+  isFitWidth: true  
+});
+
+});
+        </script>
+
+        <style type="text/css">
+.grid-item { width: 450px; margin: 10px }
+.grid-item--width2 { width: 700px; }
+        </style>
+
+        
     </head>
     <body>
-        <div class="container">
         <br/>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-3">
-                        <br/>
-                        <img src="images/photo.png" width="100%"/>
-                    </div>
-                    <div class="col-md-9">
-                        <h1 style="font-size:24pt;font-family: Georgia">Bo Li <small>李博</small></h1>
-                        <p>
-                            Senior Research and Development Engineer
+            <div class="center-block grid-item--width2">
+                    <div>
                             <br/>
-                            Baidu Inc
-                        </p>
-                        <strong>Contact</strong>
-                        <p>
-                            libo24 AT baidu DOT com
-                            <br/>
-                            prclibo AT gmail DOT com
-                        </p>
-                        <strong>Internship Openings</strong>
-                        <p>
-                            I am looking for passionate intern students interested in 3D computer vision and robotics. Feel free to send me your CV.
-                        </p>
+                            <img style="float:left; margin: 16px 30px;" src="images/photo.png" width="150">
+                            <h1 style="font-size:24pt;font-family: Georgia">Bo Li <small>李博</small></h1>
+                            <p>
+                                Senior Research and Development Engineer
+                                <br/>
+                                Baidu Inc
+                            </p>
+                            <strong>Contact</strong>
+                            <p>
+                                libo24 AT baidu DOT com
+                                <br/>
+                                prclibo AT gmail DOT com
+                            </p>
+                            <strong>Internship Openings</strong>
+                            <p>
+                                I am looking for passionate intern students interested in 3D computer vision and robotics. Feel free to send me your CV.
+                            </p>
                     </div>
-                </div>
-                <br/>
-                <div class="panel panel-default ">
+            </div>
+        <br/>
+        <div class="grid center-block">
+                <div class="panel panel-default  grid-item">
                     <div class="panel-heading">
                         <h2 class="panel-title">Professional Experience</h2>
                     </div>
@@ -56,7 +71,7 @@
                                 <p>
                                     <strong>Senior Research and Development Engineer</strong>, 2014-present
                                     <br/>
-                                    <a href="http://.idl.baidu.com">Institue of Deep Learning</a>, Baidu Inc, Beijing, China
+                                    <a href="http://idl.baidu.com">Institue of Deep Learning</a>, Baidu Inc, Beijing, China
                                     <br/>
                                     <span class="glyphicon glyphicon-link"></span> Collaborated with <a href="http://www.kaini.org">Kai Ni</a>, <a href="http://vis.uky.edu/%7Ewangl/">Liang Wang</a>
                                 </p>
@@ -84,31 +99,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="panel panel-default ">
-                    <div class="panel-heading">
-                        <h2 class="panel-title">Education</h2>
-                    </div>
-                    <div class="panel-body">
-                        <ul>
-                            <li>
-                                <p>
-                                    <strong>Eidgenössische Technische Hochschule Zürich</strong> (ETHZ), 2011-2013
-                                    <br/>
-                                    Master of Science, Computer Science (D-INFK)
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <strong>Peking University</strong> (PKU), 2007-2011
-                                    <br/>
-                                    Bachelor of Science, Intelligence Science and Technology
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="panel panel-default ">
+                <div class="panel panel-default  grid-item">
                     <div class="panel-heading">
                         <h2 class="panel-title">Papers</h2>
                     </div>
@@ -203,7 +194,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="panel panel-default ">
+                <div class="panel panel-default grid-item">
                     <div class="panel-heading">
                         <h2 class="panel-title">Open Source Activities</h2>
                     </div>
@@ -232,11 +223,51 @@
                             </a>
                             , for my contributions and activities.
                         </p>
+                        <ul>
+                            <li>
+                                <p>
+                                I have been the mentor for the <strong>GSoC '15</strong> project <strong>Omnidirectional Camera System Calibration</strong>,
+                                which integrates my previous open source Multiple-Camera System Calibration Toolbox
+                                <span class="glyphicon glyphicon-link"></span>
+                                <a href="https://github.com/prclibo/calibration-toolbox">
+                                    <span class="label label-info">Github</span>
+                                </a>
+                                to OpenCV 3.0. Thanks to Baisheng Lai for his great work in this project. The standalone repo can be found here. 
+                                <span class="glyphicon glyphicon-link"></span>
+                                <a href="https://github.com/jiuerbujie/omnidirectional_calibration">
+                                    <span class="label label-info">Github</span>
+                                </a>
+
+
+                                </p>
+                            </li>
                     </div>
                 </div>
-                <p>Edited by Bo Li, 2014. Thanks to Bootstrap.</p>
+                <div class="panel panel-default  grid-item">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Education</h2>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li>
+                                <p>
+                                    <strong>Eidgenössische Technische Hochschule Zürich</strong> (ETHZ), 2011-2013
+                                    <br/>
+                                    Master of Science, Computer Science (D-INFK)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <strong>Peking University</strong> (PKU), 2007-2011
+                                    <br/>
+                                    Bachelor of Science, Intelligence Science and Technology
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-2"></div>
-        </div>
+
+                <p>Edited by Bo Li, 2014. Thanks to Bootstrap.</p>
     </body>
 </html>
