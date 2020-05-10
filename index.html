@@ -19,14 +19,23 @@
         <script src="masonry.pkgd.min.js"></script>
 
         <script language="JavaScript">
-$(function(){  
-$('.grid').masonry({
-  // options...
-  itemSelector : '.grid-item',
-  isFitWidth: true  
-});
+// $(function(){  
+// $('.grid').masonry({
+//   // options...
+//   itemSelector : '.grid-item',
+//   isFitWidth: true  
+// });
+// });
+            // https://aiocollective.com/blog/images-height-and-position-problem-masonry-isotope/
+            $(window).load(function(){
+	        var $container = $('.grid');
+	        // initialize
+	        $container.masonry({
+                    itemSelector : '.grid-item',
+                    isFitWidth: true  
+	        });
+            });
 
-});
         </script>
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
